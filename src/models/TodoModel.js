@@ -7,6 +7,11 @@ class TodoModel {
         const request = axios.get(URL);
         return request;
     }
+
+    static create = (todo) => {
+        const request = axios.post(URL, todo);
+        return request;
+    }
 }
 
 export default TodoModel;
