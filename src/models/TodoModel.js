@@ -12,6 +12,11 @@ class TodoModel {
         const request = axios.post(URL, todo);
         return request;
     }
+
+    static delete = (todo) => {
+        const request = axios.delete(`${URL}/${todo._id}`);
+        return request;
+    }
 }
 
 export default TodoModel;
