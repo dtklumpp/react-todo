@@ -17,6 +17,11 @@ class TodoModel {
         const request = axios.delete(`${URL}/${todo._id}`);
         return request;
     }
+
+    static update = (todo) => {
+        const request = axios.put(`${URL}/${todo._id}`, todo);
+        return request;
+    }
 }
 
 export default TodoModel;
